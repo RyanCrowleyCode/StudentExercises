@@ -6,3 +6,11 @@
 # Slack handle
 # The student's cohort
 # The collection of exercises that the student is currently working on
+
+class Student():
+    def __init__(self, firstName, lastName):
+        self.first_name = firstName
+        self.last_name = lastName
+        self.slack_handle = ''
+        self.current_exercises = []
+        self.cohortId = ''
