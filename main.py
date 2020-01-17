@@ -47,10 +47,11 @@ for student in dc36.students:
     joe.assign_exercise(student, taco_stand)
     joe.assign_exercise(student, dog_show)
 
-# for student in dc36.students:
-#     for exercise in student.current_exercises:
-#         print(f"{student.first_name} has been assigned {exercise.name} in {exercise.language}")
-#     print()
+for student in dc36.students:
+    for exercise in student.current_exercises:
+        print(f"{student.first_name} has been assigned {exercise.name} in {exercise.language}")
+    print()
+
 
 
 
