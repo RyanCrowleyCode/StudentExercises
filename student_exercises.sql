@@ -78,3 +78,19 @@ VALUES ('Function Junction', 'JavaScript');
 
 INSERT INTO Exercises (Exercise_Name, Exercise_Language)
 VALUES ('Flexbox Froggy', 'CSS');
+
+
+
+-- Create 3 instructors
+
+INSERT INTO Instructors (First_Name, Last_Name, Slack_Handle, Speciality, Cohort_Id)
+VALUES ('Joe', 'Shepherd', 'joes', 'Teaching Python with jokes', 1);
+
+INSERT INTO Instructors (First_Name, Last_Name, Slack_Handle, Speciality, Cohort_Id)
+VALUES ('Jisie', 'David', 'jisie', 'Teaching full-stack development', 1);
+
+INSERT INTO Instructors (First_Name, Last_Name, Slack_Handle, Speciality, Cohort_Id)
+VALUES ('Jenna', 'Solis', 'jenna', 'Teaching back-end development', 1);
+
+
+
