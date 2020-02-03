@@ -46,3 +46,18 @@ CREATE TABLE Student_Exercises (
 	FOREIGN KEY('Exercise_Id') REFERENCES 'Exercises'('Exercise_Id')
 );
 
+
+
+-- Create 3 cohorts
+
+INSERT INTO Cohorts ('Name')
+VALUES ('Day Cohort 36');
+
+
+INSERT INTO Cohorts ('Name')
+VALUES ('Day Cohort 37');
+
+
+INSERT INTO Cohorts ('Name')
+VALUES ('Day Cohort 38');
+
