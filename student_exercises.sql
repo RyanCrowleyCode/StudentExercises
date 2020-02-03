@@ -61,3 +61,20 @@ VALUES ('Day Cohort 37');
 INSERT INTO Cohorts ('Name')
 VALUES ('Day Cohort 38');
 
+
+-- Create 5 Exercises
+
+INSERT INTO Exercises (Exercise_Name, Exercise_Language)
+VALUES ('ChickenMonkey', 'JavaScript');
+
+INSERT INTO Exercises (Exercise_Name, Exercise_Language)
+VALUES ('MonkeyButt', 'Python');
+
+INSERT INTO Exercises (Exercise_Name, Exercise_Language)
+VALUES ('FizzBuzz', 'C#');
+
+INSERT INTO Exercises (Exercise_Name, Exercise_Language)
+VALUES ('Function Junction', 'JavaScript');
+
+INSERT INTO Exercises (Exercise_Name, Exercise_Language)
+VALUES ('Flexbox Froggy', 'CSS');
