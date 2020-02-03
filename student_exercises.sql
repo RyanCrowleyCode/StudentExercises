@@ -93,4 +93,29 @@ INSERT INTO Instructors (First_Name, Last_Name, Slack_Handle, Speciality, Cohort
 VALUES ('Jenna', 'Solis', 'jenna', 'Teaching back-end development', 1);
 
 
+-- Create 7 Students
+
+INSERT INTO Students (First_Name, Last_Name, Slack_Handle, Cohort_Id)
+VALUES ('Ryan', 'Crowley', 'ryancrowleycode', 1);
+
+INSERT INTO Students (First_Name, Last_Name, Slack_Handle, Cohort_Id)
+VALUES ('John', 'Johnson', 'jonnyguy', 2);
+
+INSERT INTO Students (First_Name, Last_Name, Slack_Handle, Cohort_Id)
+VALUES ('Jack', 'Napier', 'joker89', 3);
+
+INSERT INTO Students (First_Name, Last_Name, Slack_Handle, Cohort_Id)
+VALUES ('Ned', 'Flanders', 'hidelyho', 1);
+
+INSERT INTO Students (First_Name, Last_Name, Slack_Handle, Cohort_Id)
+VALUES ('Sally', 'Fields', 'auntmay', 2);
+
+INSERT INTO Students (First_Name, Last_Name, Slack_Handle, Cohort_Id)
+VALUES ('Liz', 'Lizard', 'geckogirl', 3);
+
+INSERT INTO Students (First_Name, Last_Name, Slack_Handle, Cohort_Id)
+VALUES ('Frederick', 'Frederickson', 'wtfred', 1);
+
+
+
 
