@@ -2,6 +2,5 @@
 from nss_person import NSSPerson
 
 class Student(NSSPerson):
-    def __init__(self, firstName, lastName):
-        super().__init__(firstName, lastName)
-        self.current_exercises = []
+    def __init__(self, firstName, lastName, slackHandle, cohort):
+        super().__init__(firstName, lastName,slackHandle, cohort)
