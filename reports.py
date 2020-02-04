@@ -21,8 +21,8 @@ class StudentExerciseReports():
 
         # Opens and closes connection because we use 'with'
         with sqlite3.connect(self.db_path) as conn:
-            # re-define what row factory does to create Student instances
-            conn.row_factory = self.create_student
+            # re-define what row factory does to create Student instances using anonymous function
+            conn.row_factory = lambda cursor, row: Student(row[1],row[2], row[3], row[5])
 
             # creating a variable to hold the cursor (translator between Python and SQL)
             db_cursor = conn.cursor()
@@ -30,12 +30,12 @@ class StudentExerciseReports():
             # SQL Query that creates a property on cursor
             db_cursor.execute("""
             select 
-                s.Student_Id,
-                s.First_Name,
-                s.Last_Name,
-                s.Slack_Handle,
-                s.Cohort_Id,
-                c.Name
+                s.student_id,
+                s.first_name,
+                s.last_name,
+                s.slack_handle,
+                s.cohort_id,
+                c.name
             FROM Students s
             JOIN Cohorts c on s.Cohort_Id = c.Cohort_Id
             ORDER BY s.Cohort_Id;
@@ -45,8 +45,12 @@ class StudentExerciseReports():
             all_students = db_cursor.fetchall()
 
             # loop through each tuple in all_students and print out information
-            for student in all_students:
-                print(f'{student.First_Name} {student.Last_Name} is in {student.Cohort}.')
+
+            # for student in all_students:
+            #     print(student)
+
+            # as a comprehension:
+            [print(s) for s in all_students]
 
 
 # create an object instance of StudentExerciseReports

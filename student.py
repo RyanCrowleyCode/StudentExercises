@@ -4,3 +4,6 @@ from nss_person import NSSPerson
 class Student(NSSPerson):
     def __init__(self, firstName, lastName, slackHandle, cohort):
         super().__init__(firstName, lastName,slackHandle, cohort)
+
+    def __repr__(self):
+        return f'{self.first_name} {self.last_name} is in {self.cohort}.'
