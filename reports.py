@@ -1,3 +1,4 @@
+# sqlite3 allows python to access the database
 import sqlite3
 
 
@@ -15,9 +16,10 @@ class StudentExerciseReports():
 
         # Opens and closes connection because we use 'with'
         with sqlite3.connect(self.db_path) as conn:
-            # creating a variable to hold the cursor
+            # creating a variable to hold the cursor (translator between Python and SQL)
             db_cursor = conn.cursor()
 
+            # SQL Query that creates a property on cursor
             db_cursor.execute("""
             select s.Student_Id,
                 s.First_Name,
@@ -30,8 +32,10 @@ class StudentExerciseReports():
             ORDER BY s.Cohort_Id;
             """)
 
+            # retrieve data after executing select statement to get a list of the matching rows
             all_students = db_cursor.fetchall()
 
+            # loop through each tuple in all_students and print out information
             for student in all_students:
                 print(f'{student[1]} {student[2]} is in {student[5]}')
 
